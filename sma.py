@@ -3,7 +3,7 @@ import matplotlib as mpl
 import matplotlib.pyplot as plt
 import numpy as np
 
-raw = pd.read_csv('data/aiif_eikon_eod_data.csv', index_col=0, parse_dates=True)
+raw = pd.read_csv('http://hilpisch.com/pyalgo_eikon_eod_data.csv', index_col=0, parse_dates=True)
 raw.info()
 data = pd.DataFrame(raw['EUR='])
 data.rename(columns={'EUR=': 'price'}, inplace=True)

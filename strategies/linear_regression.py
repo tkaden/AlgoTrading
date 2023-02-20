@@ -46,7 +46,7 @@ class LRVectorBacktester(object):
     def get_data(self):
         '''Retrieves and prepares the data.
         '''
-        raw = pd.read_csv('data/aiif_eikon_eod_data.csv', index_col=0, parse_dates=True).dropna()
+        raw = pd.read_csv('http://hilpisch.com/pyalgo_eikon_eod_data.csv', index_col=0, parse_dates=True).dropna()
         raw = pd.DataFrame(raw[self.symbol])
         raw = raw.loc[self.start:self.end]
         raw.rename(columns={self.symbol: 'price'}, inplace=True)
